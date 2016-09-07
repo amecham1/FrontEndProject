@@ -9,5 +9,4 @@ function homeCtrl($scope,homeService){
 
 
 
-
 }//end of home controller

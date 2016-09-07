@@ -2,10 +2,12 @@ angular.module('noServerApp')
 .controller('quoteCtrl',quoteCtrl)
 
 
+
 function quoteCtrl($scope,quoteService){
 
+  
+  $scope.quotes=quoteService.data
 
 
-$scope.test='hello'
 
-}// end of quoteCtrl
+}// end of quote controller

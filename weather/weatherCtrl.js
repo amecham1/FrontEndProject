@@ -6,6 +6,4 @@ function weatherCtrl($scope,weatherService){
 
 
 
-
-
 }//end of weather controller

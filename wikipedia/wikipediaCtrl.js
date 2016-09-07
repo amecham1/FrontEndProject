@@ -9,6 +9,4 @@ function wikipediaCtrl($scope,wikipediaService){
 
 
 
-
-
 }// end of wikipedia controller

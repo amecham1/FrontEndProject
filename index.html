@@ -1,29 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='noServerApp'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Info Page</title>
+    <title>Info Site</title>
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/home.css" rel="stylesheet">
     <link href="styles/quote.css" rel="stylesheet">
     <link href="styles/weather.css" rel="stylesheet">
     <link href="styles/wikipedia.css" rel="stylesheet">
   </head>
-  <body>
+  <body ng-controller='mainCtrl'>
+    <nav class='nav-bar'>
+      <ul class='nav-bar-list'>
+        <li ui-sref='home' class='nav-directions' id='home-page'>Home</li>
+        <li ui-sref='quotes' class='nav-directions' id='quote-page'>Quotes</li>
+        <li ui-sref='weather' class='nav-directions' id='weather-page'>Weather</li>
+        <li ui-sref='wikipedia' class='nav-directions' id='wiki-page'>Wikipedia</li>
+      </ul>
+    </nav>
+    <main>
+
+      <ui-view></ui-view>
+
+    </main>
+
+
+
+
 
 
 
     <script src="vendors/angular.js"></script>
     <script src="vendors/ui-router.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="home/homeCtrl.js"></script>
     <script src="quote/quoteCtrl.js"></script>
     <script src="weather/weatherCtrl.js"></script>
     <script src="wikipedia/wikipediaCtrl.js"></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src=""></script>
+    <script src="services/mainService.js"></script>
+    <script src="services/homeService.js"></script>
+    <script src="services/quoteService.js"></script>
+    <script src="services/weatherService.js"></script>
+    <script src="services/wikipediaService.js"></script>
 
   </body>
 </html>

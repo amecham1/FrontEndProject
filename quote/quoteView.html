@@ -1,11 +1,12 @@
 <ul class='quote-list'>
   <li>Random</li>
   <li>Deep</li>
-  <li>Ron Swanson</li>
+  <li ng-click='getRon()'>Ron Swanson</li>
 </ul>
 <div class="quote-box">
-<div class="quote-results"ng-repeat="q in quotes">
-{{q}}
+<div class="quote-results"ng-repeat="quote in quotes">
+<span class='quote-placement'>{{quote.Quote}}</span>
+<span class='author-placement'>{{quote.Author}}</span>
 </div>
 
 </div>

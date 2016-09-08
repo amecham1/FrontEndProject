@@ -20,8 +20,11 @@
 .quote-results{
   width: 80%;
   background-color: papayawhip;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 20px 20px 40px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/*.quote-placement{
+padding: 20px 20px 30px 20px;
+
+}*/

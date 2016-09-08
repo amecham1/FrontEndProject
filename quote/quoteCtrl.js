@@ -5,8 +5,20 @@ angular.module('noServerApp')
 
 function quoteCtrl($scope,quoteService){
 
-  
-  $scope.quotes=quoteService.data
+
+quoteService.getSwanson()
+  .then(function(swanson){
+    var ronQuotes=[];
+    for(var i=0;i<swanson.length;i++){
+      var ronald = {
+        Quote: swanson[i],
+        Author: "- Ron Swanson"
+      }
+      ronQuotes.push(ronald)
+    }
+    $scope.quotes=ronQuotes;
+  })
+
 
 
 

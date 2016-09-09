@@ -18,11 +18,6 @@ angular.module('noServerApp',['ui.router'])
     templateUrl:'weather/weatherVeiw.html',
     controller:'weatherCtrl'
   })
-  .state('wikipedia',{
-    url:'/wikipedia',
-    templateUrl:'wikipedia/wikipediaView.html',
-    controller:'wikipediaCtrl'
-  })
 
   $urlRouterProvider
   .otherwise('/home')

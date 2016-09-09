@@ -1,12 +1,19 @@
 <ul class='quote-list'>
-  <li>Random</li>
-  <li>Deep</li>
-  <li ng-click='getRon()'>Ron Swanson</li>
+  <li ng-click='getProgramQuotes()'>Programmer</li>
+  <li ng-click='getMovieQuotes(famousQuotes)'>Famous</li>
+  <li ng-click='getRonQuotes(ronQuotes)'>Ron Swanson</li>
 </ul>
 <div class="quote-box">
-<div class="quote-results"ng-repeat="quote in quotes">
+<div class="quote-results" ng-repeat='quote in quotes'>
+
+
+<div class="text-quote">
+
 <span class='quote-placement'>{{quote.Quote}}</span>
-<span class='author-placement'>{{quote.Author}}</span>
+<br>
+<span class='author-placement'> – {{quote.Author}}</span>
 </div>
+</div>
+
 
 </div>

@@ -4,12 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Info Site</title>
-    <link href="styles/reset.css" rel="stylesheet">
-    <link href="styles/base.css" rel="stylesheet">
-    <link href="styles/home.css" rel="stylesheet">
-    <link href="styles/quote.css" rel="stylesheet">
-    <link href="styles/weather.css" rel="stylesheet">
-    <link href="styles/wikipedia.css" rel="stylesheet">
+    <link href="public/style.css" rel="stylesheet">
   </head>
   <body ng-controller='mainCtrl'>
     <nav class='nav-bar'>
@@ -34,17 +29,9 @@
 
     <script src="vendors/angular.js"></script>
     <script src="vendors/ui-router.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/mainCtrl.js"></script>
-    <script src="home/homeCtrl.js"></script>
-    <script src="quote/quoteCtrl.js"></script>
-    <script src="weather/weatherCtrl.js"></script>
-    <script src="wikipedia/wikipediaCtrl.js"></script>
-    <script src="services/mainService.js"></script>
-    <script src="services/homeService.js"></script>
-    <script src="services/quoteService.js"></script>
-    <script src="services/weatherService.js"></script>
-    <script src="services/wikipediaService.js"></script>
+      <script src="public/bundle.js"></script>
+        <script src="quote/programQuotes.json"></script>
+
 
   </body>
 </html>

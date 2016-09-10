@@ -7,13 +7,7 @@
     <link href="public/style.css" rel="stylesheet">
   </head>
   <body ng-controller='mainCtrl'>
-    <nav class='nav-bar'>
-      <ul class='nav-bar-list'>
-        <li ui-sref='home' class='nav-directions' id='home-page'>Home</li>
-        <li ui-sref='quotes' class='nav-directions' id='quote-page'>Quotes</li>
-        <li ui-sref='weather' class='nav-directions' id='weather-page'>Weather</li>
-      </ul>
-    </nav>
+
     <main>
 
       <ui-view></ui-view>
@@ -30,6 +24,7 @@
     <script src="vendors/ui-router.js"></script>
       <script src="public/bundle.js"></script>
         <script src="quote/programQuotes.json"></script>
+        
 
 
   </body>

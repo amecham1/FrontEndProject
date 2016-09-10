@@ -36,7 +36,6 @@ $scope.famousQuotes=[];
                   Author:  quote.author
                 };
                 $scope.famousQuotes.push(letters);
-                // console.log($scope.famousQuotes);
 
 
             });
@@ -54,33 +53,28 @@ var nineQuote =famousQuotes();
 var tenQuote=famousQuotes();
 
 $scope.getMovieQuotes = function(getQuotes){
-  // console.log(getQuotes[0]['Quote']);
   $scope.quotes = getQuotes;
 };
-// console.log($scope.famousQuotes);
- // console.log($scope.famousQuotes.Author);
-
-// var quoteArr =[];
 
 
 
 
-//  $scope.getProgramQuotes = function(){
-//   //  console.log('fired!');
-//           quoteService.getProgrammerQuote()
-//             .then(function(quote){
-//              quoteArr = quote;
-//            });
-//         // console.log(quote);
-// };
-// console.log(quoteArr);
-// $scope.getProgrammingQuotes = function(programmingQuotes){
-//   console.log('fired!');
-//   quoteService.getProgrammerQuotes()
-//   .then(function(quote){
-//     $scope.quotes = quotes;
-//   });
-// };
+
+ $scope.getProgramQuotes = function() {
+quoteService.getProgrammerQuote()
+    .then(function(quote) {
+      var programArr = [];
+      for(var i = 0;i<quote.length; i++){
+        var programObj = {
+          Quote: quote[i].quote,
+          Author: quote[i].author
+        };
+        programArr.push(programObj);
+      }
+        $scope.quotes = programArr;
+    });
+};
+
 
 
 

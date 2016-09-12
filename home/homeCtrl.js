@@ -5,7 +5,9 @@ angular.module('noServerApp')
 
 function homeCtrl($scope,homeService){
 
-
+$scope.toTop = function(){
+  return scroll(0,0);
+}
 
 
 

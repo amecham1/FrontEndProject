@@ -26,7 +26,7 @@
 
 .weather-box{
   width: 40%;
-  // height: 65vh;
+  margin-top: 100px;
   background-image: url('../img/blacktrans.png');
   margin-left: auto;
   margin-right: auto;
@@ -36,7 +36,6 @@
   width:40%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -77,6 +76,7 @@
       white-space: nowrap;
       font-size: 3rem;
       padding-bottom: 20px;
+      letter-spacing: 2.5px;
   }
 .result-description{
   font-size: 3rem;

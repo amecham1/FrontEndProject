@@ -1,10 +1,11 @@
 angular.module('noServerApp')
-.service('homeService',homeService)
+    .service('homeService', homeService);
 
 
-function homeService(){
+function homeService() {
 
 
 
 
-}//end of home service
+
+} //end of home service

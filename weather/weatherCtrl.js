@@ -2,7 +2,6 @@ angular.module('noServerApp')
 .controller('weatherCtrl',weatherCtrl);
 
 function weatherCtrl($scope,weatherService){
-// $(document).ready(function(){
 
 $scope.hidden =true;
 
@@ -20,8 +19,6 @@ $scope.getlocation = function(location){
 
 
 
-
-// });//end of jquery
 
 
 }//end of weather controller

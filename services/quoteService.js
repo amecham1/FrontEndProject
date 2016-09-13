@@ -35,14 +35,12 @@ this.getQuote = function(){
 
 
 this.getProgrammerQuote = function(){
-  console.log('fired!!');
   var deffered = $q.defer();
   $http({
     method:"GET",
     url:'quote/programQuotes.json'
 
   }).then(function(programquote){
-    // console.log(programquote.data);
     deffered.resolve(programquote.data)
   })
   return deffered.promise;

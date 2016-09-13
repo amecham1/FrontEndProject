@@ -10,7 +10,7 @@
   <li ng-click='getRonQuotes(ronQuotes)'>Ron Swanson</li>
 </ul>
 <div class="quote-box">
-<div class="quote-results" ng-repeat='quote in quotes'>
+<div ng-style="{'background-image': 'url(../img/back-{{quote.Num}}.png)'}" class="quote-results" ng-repeat='quote in quotes'>
 
 
 <div class="text-quote">

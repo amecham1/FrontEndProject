@@ -5,6 +5,12 @@ angular.module('noServerApp')
 
 function quoteCtrl($scope,quoteService){
 
+  function getBackgrounds(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
   $scope.ronQuotes=[];
 
 var getRonQuotes = quoteService.getSwanson()
@@ -13,9 +19,10 @@ var getRonQuotes = quoteService.getSwanson()
     for(var i=0;i<swanson.length;i++){
       var ronald = {
         Quote: swanson[i],
-        Author: "Ron Swanson"
+        Author: "Ron Swanson",
+        Num: getBackgrounds(1,9)
       };
-      $scope.ronQuotes.push(ronald);
+        $scope.ronQuotes.push(ronald);
     }
   });
 
@@ -33,7 +40,8 @@ $scope.famousQuotes=[];
             .then(function(quote){
                 var letters = {
                   Quote: quote.quote,
-                  Author:  quote.author
+                  Author:  quote.author,
+                  Num: getBackgrounds(1,9)
                 };
                 $scope.famousQuotes.push(letters);
 
@@ -67,13 +75,19 @@ quoteService.getProgrammerQuote()
       for(var i = 0;i<quote.length; i++){
         var programObj = {
           Quote: quote[i].quote,
-          Author: quote[i].author
+          Author: quote[i].author,
+          Num: getBackgrounds(1,9)
         };
         programArr.push(programObj);
       }
         $scope.quotes = programArr;
+
     });
 };
+
+
+$scope.backNum = getBackgrounds(1,9);
+
 
 
 

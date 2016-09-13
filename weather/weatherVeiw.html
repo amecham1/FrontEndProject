@@ -5,14 +5,14 @@
 
 <!-- <h3 class='weather-title'>Weather</h3> -->
 <form class="searcher" ng-submit='getlocation(weathersearch)'>
-<input class='search-box' type="text" placeholder="search" ng-model='weathersearch'>
+<input class='search-box' type="text" placeholder=" Search" ng-model='weathersearch'>
 </form>
 
 <div class="weather-box animated fadeIn">
   <div class="weather-results animated slideInUp" ng-hide='hidden'>
     <h3 class='weather-result-title'>{{weather.name}}</h3>
     <span class='fdeg result-temp'>{{weather.main.temp}}</span>
-    <span class='weather-min-max'><span class='fdeg'>{{weather.main.temp_min}}</span> -  <span class='fdeg'>{{ weather.main.temp_max}}</span></span>
+    <span class='weather-min-max'><span class='fdeg'>{{weather.main.temp_min}}</span> -  <span class='fdeg'> {{ weather.main.temp_max}}</span></span>
     <span class='result-description'>{{weather.weather[0].main}}</span>
     <img class='weather-icon' ng-src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" alt="weather-icon"/>
   </div>
